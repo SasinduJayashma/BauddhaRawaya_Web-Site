@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>බෞද්ධ රාවය </title>
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/7.8.0/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/7.8.0/firebase-auth.js"></script>
+    <script defer src="/__/firebase/7.8.0/firebase-database.js"></script>
+    <script defer src="/__/firebase/7.8.0/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/7.8.0/firebase-storage.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+
+    <style media="screen">
+        body {
+            background: #ECEFF1;
+            color: rgba(0, 0, 0, 0.87);
+            font-family: Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        #message {
+            background: white;
+            max-width: 360px;
+            margin: 100px auto 16px;
+            padding: 32px 24px;
+            border-radius: 3px;
+        }
+        
+        #message h2 {
+            color: #ffa100;
+            font-weight: bold;
+            font-size: 16px;
+            margin: 0 0 8px;
+        }
+        
+        #message h1 {
+            font-size: 22px;
+            font-weight: 300;
+            color: rgba(0, 0, 0, 0.6);
+            margin: 0 0 16px;
+        }
+        
+        #message p {
+            line-height: 140%;
+            margin: 16px 0 24px;
+            font-size: 14px;
+        }
+        
+        #message a {
+            display: block;
+            text-align: center;
+            background: #039be5;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: white;
+            padding: 16px;
+            border-radius: 4px;
+        }
+        
+        #message,
+        #message a {
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        }
+        
+        #load {
+            color: rgba(0, 0, 0, 0.4);
+            text-align: center;
+            font-size: 13px;
+        }
+        
+        @media (max-width: 600px) {
+            body,
+            #message {
+                margin-top: 0;
+                background: white;
+                box-shadow: none;
+            }
+            body {
+                border-top: 16px solid #ffa100;
+            }
+        }
+    </style>
+
+    <!-- <link rel="manifest" href="site.webmanifest"> -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/gijgo.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/slicknav.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+</head>
+
+<body>
+    <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+    <!-- header-start -->
+    <header>
+        <div class="header-area ">
+            <div id="sticky-header" class="main-header-area">
+                <div class="container-fluid p-0">
+                    <div class="row align-items-center no-gutters">
+                        <div class="col-xl-2 col-lg-2">
+                            <div class="logo-img">
+                                <a href="index.html">
+                                    <img src="img/logo.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-7 col-lg-7">
+                            <div class="main-menu  d-none d-lg-block">
+                                <nav>
+                                    <ul id="navigation">
+                                        <li><a class="active" href="index.html">Home</a></li>
+                                        <li><a href="#">Magazines <i class="ti-angle-down"></i></a>
+                                            <ul class="submenu">
+                                                <li><a href="magazine.html">Febuary</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="about.html">About</a></li>
+                                        <li><a href="contact.html">Contact</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 d-none d-lg-block">
+                            <div class="log_chat_area d-flex align-items-center">
+
+                                <div class="live_chat_btn">
+                                    <a class="boxed_btn_orange" href="#">
+                                        <i class="fa fa-phone"></i>
+                                        <span>+9476 415 9184</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header-end -->
+
+    <!-- slider_area_start -->
+    <div class="slider_area ">
+        <div class="single_slider d-flex align-items-center justify-content-center slider_bg_1">
+            <div class="container">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-xl-6 col-md-6">
+                        <div class="illastrator_png">
+                            <img src="img/banner/edu_ilastration.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-md-6">
+                        <div class="slider_info">
+                            <h3>ධර්ම රාජ්‍යයක් <br> උදෙසා ධර්ම <br> දානයක් ලෙස </h3>
+                            <a href="magazine.html" class="boxed_btn">මාසික සඟරා සදහා පිවිසෙන්න </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- slider_area_end -->
+
+    <!-- about_area_start -->
+    <div class="about_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-5 col-lg-6">
+                    <div class="single_about_info">
+                        <h3>ධර්ම දේශනා 100කට වඩා <br> මාසික සඟරා 10ක</h3>
+                        <p>Our set he for firmament morning sixth subdue darkness creeping gathered divide our let god moving. Moving in fourth air night bring upon you’re it beast let you dominion likeness open place day great wherein heaven sixth lesser
+                            subdue fowl </p>
+                        <a href="#" class="boxed_btn">මාසික සඟරා සදහා පිවිසෙන්න</a>
+                    </div>
+                </div>
+                <div class="col-xl-6 offset-xl-1 col-lg-6">
+                    <div class="about_tutorials">
+                        <div class="courses">
+                            <div class="inner_courses">
+                                <div class="text_info">
+                                    <span>100+</span>
+                                    <p> දේශනා</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="courses-blue">
+                            <div class="inner_courses">
+                                <div class="text_info">
+                                    <span>10+</span>
+                                    <p> මාසික සඟරා</p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="courses-sky">
+                            <div class="inner_courses">
+                                <div class="text_info">
+                                    <span>100+</span>
+                                    <p> පරිශීලකයින්</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- about_area_end -->
+</body>
+
+<!-- footer -->
+<footer class="footer footer_bg_1">
+    <div class="footer_top">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-4 col-md-6 col-lg-4">
+                    <div class="footer_widget">
+                        <div class="footer_logo">
+                            <a href="#">
+                                <img src="img/logo.png" alt="">
+                            </a>
+                        </div>
+                        <p>
+                            වසර දහස් ගණනක ඉතිහාසයක් ඇති සිංහල ජාතිය ඉතිහාසයේ කවරදාකවත් නොවු තරමි බිහිසුනු අර්බුදයකට මුහුණපා සිටි. එම ජාතික ප්‍රශ්ණයෙදි සිංහල හා බෞද්ධ විරෝධි දේශිය හා විදේශිය බලවෙිග සියල්ල එක පෙරමුනකට පැමින සිංහල ජාතියට පහර දෙයි. සිංහල බෞද්ධ යැයි කියාගන්නා ගිහි පැවැදි
+                            නායක නායිකාවෝද එම අර්බුදයේදි තාන්න මාන්න තනතුරැ හා නායන අනුනායක ධුර වලට ලොභිව සිංහල බෞද්ධ විරෝධි පාර්ශවයට දැනුවත්ව හෝ නොදැනුවත්ව ආධාර කරති.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-xl-2 offset-xl-1 col-md-6 col-lg-3">
+                    <div class="footer_widget">
+                        <h3 class="footer_title">
+                            මාසික සඟරා
+                        </h3>
+                        <ul>
+                            <li><a href="#">2017</a></li>
+                            <li><a href="#">2018</a></li>
+                            <li><a href="#">2019</a></li>
+                            <li><a href="#">2020</a></li>
+                        </ul>
+
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-6 col-lg-2">
+                    <div class="footer_widget">
+                        <h3 class="footer_title">
+                            Something
+                        </h3>
+                        <ul>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#"> 4</a></li>
+                            <li><a href="#"> 5</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-6 col-lg-3">
+                    <div class="footer_widget">
+                        <h3 class="footer_title">
+                            Address
+                        </h3>
+                        <p>
+                            සිරිසුමේධ දහම් පාසල සියපත්ගම, පතිරාදවත්ත, උඩහේන, උඩිහිගුල්වල, මහනුවර <br> buddharawaya@gmail.com
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- footer -->
+
+
+<!-- JS here -->
+<script src="js/vendor/modernizr-3.5.0.min.js"></script>
+<script src="js/vendor/jquery-1.12.4.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/isotope.pkgd.min.js"></script>
+<script src="js/ajax-form.js"></script>
+<script src="js/waypoints.min.js"></script>
+<script src="js/jquery.counterup.min.js"></script>
+<script src="js/imagesloaded.pkgd.min.js"></script>
+<script src="js/scrollIt.js"></script>
+<script src="js/jquery.scrollUp.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/nice-select.min.js"></script>
+<script src="js/jquery.slicknav.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/gijgo.min.js"></script>
+
+<!--contact js-->
+<script src="js/contact.js"></script>
+<script src="js/jquery.ajaxchimp.min.js"></script>
+<script src="js/jquery.form.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/mail-script.js"></script>
+
+<script src="js/main.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+        // // The Firebase SDK is initialized and available here!
+        //
+        // firebase.auth().onAuthStateChanged(user => { });
+        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+        // firebase.messaging().requestPermission().then(() => { });
+        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+        //
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+
+        try {
+            let app = firebase.app();
+            let features = ['auth', 'database', 'messaging', 'storage'].filter(feature => typeof app[feature] === 'function');
+            document.getElementById('load').innerHTML = `Firebase SDK loaded with ${features.join(', ')}`;
+        } catch (e) {
+            console.error(e);
+            document.getElementById('load').innerHTML = 'Error loading the Firebase SDK, check the console.';
+        }
+    });
+</script>
+
+
+</html>
